@@ -16,19 +16,20 @@ pygame.display.set_caption("Planetas")
 efeito_sonoro=pygame.mixer.Sound("explode.ogg")
 
 # Carregar a imagem de fundo
-imagem_fundo=pygame.image.load("space.jpg")
+imagem_fundo = pygame.image.load("image/space.jpg")
 
-# Carregando asteroide
-aster=pygame.image.load("asteroid.png")
-nave_alien1=pygame.image.load("nave_alien.png")
-cometa1=pygame.image.load("cometa.png")
-saturno1=pygame.image.load("saturno.png")
-bola_fogo1=pygame.image.load("bola_fogo.png")
-metal1=pygame.image.load("metal.png")
-marte1=pygame.image.load("marte.png")
-venus1=pygame.image.load("venus.png")
-meteorito1=pygame.image.load("meteorito.png")
-meteorito2=pygame.image.load("meteorito2.png")
+# Carregando asteroide e outros objetos
+aster = pygame.image.load("image/asteroid.png")
+nave_alien1 = pygame.image.load("image/nave_alien.png")
+cometa1 = pygame.image.load("image/cometa.png")
+saturno1 = pygame.image.load("image/saturno.png")
+bola_fogo1 = pygame.image.load("image/bola_fogo.png")
+metal1 = pygame.image.load("image/metal.png")
+marte1 = pygame.image.load("image/marte.png")
+venus1 = pygame.image.load("image/venus.png")
+meteorito1 = pygame.image.load("image/meteorito.png")
+meteorito2 = pygame.image.load("image/meteorito2.png")
+
 
 
 # diminuindo a escala do asteroide
@@ -44,7 +45,7 @@ meteorito=pygame.transform.scale(meteorito1,(52,71))
 meteorito_2=pygame.transform.scale(meteorito2,(52,71))
 
 # Carregando nave
-nav=pygame.image.load("fighter.png")
+nav=pygame.image.load("image/fighter.png")
 # diminuindo a escala da nave
 nave=pygame.transform.scale(nav,(130,64))
 nave=pygame.transform.flip(nave, True, False)
