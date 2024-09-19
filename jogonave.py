@@ -8,7 +8,7 @@ pygame.init()
 
 # Configurações da tela
 largura_tela=1250
-altura_tela=800
+altura_tela=719
 tela=pygame.display.set_mode((largura_tela, altura_tela))
 pygame.display.set_caption("Planetas")
 
@@ -16,33 +16,32 @@ pygame.display.set_caption("Planetas")
 efeito_sonoro=pygame.mixer.Sound("explode.ogg")
 
 # Carregar a imagem de fundo
-imagem_fundo=pygame.image.load("nebulosa.jpg")
+imagem_fundo=pygame.image.load("space.jpg")
 
 # Carregando asteroide
 aster=pygame.image.load("asteroid.png")
-lua1=pygame.image.load("lua.png")
-ovo1=pygame.image.load("ovo.png")
-homem_ferro1=pygame.image.load("hferro.png")
-fogo1=pygame.image.load("fogo.png")
-martelo1=pygame.image.load("martelo.png")
-carro1=pygame.image.load("carro.png")
-moto1=pygame.image.load("moto.png")
-lixo1=pygame.image.load("lixo.png")
-musk1=pygame.image.load("musk.png")
+nave_alien1=pygame.image.load("nave_alien.png")
+cometa1=pygame.image.load("cometa.png")
+saturno1=pygame.image.load("saturno.png")
+bola_fogo1=pygame.image.load("bola_fogo.png")
+metal1=pygame.image.load("metal.png")
+marte1=pygame.image.load("marte.png")
+venus1=pygame.image.load("venus.png")
+meteorito1=pygame.image.load("meteorito.png")
+meteorito2=pygame.image.load("meteorito2.png")
 
 
 # diminuindo a escala do asteroide
 asteroide=pygame.transform.scale(aster,(52,71))
-lua=pygame.transform.scale(lua1,(52,71))
-ovo=pygame.transform.scale(ovo1,(52,71))
-homem_ferro=pygame.transform.scale(homem_ferro1,(52,71))
-fogo=pygame.transform.scale(fogo1,(52,71))
-martelo=pygame.transform.scale(martelo1,(52,71))
-carro=pygame.transform.scale(carro1,(52,71))
-moto=pygame.transform.scale(moto1,(52,71))
-lixo=pygame.transform.scale(lixo1,(52,71))
-musk=pygame.transform.scale(musk1,(52,71))
-
+nave_alien=pygame.transform.scale(nave_alien1,(52,71))
+cometa=pygame.transform.scale(cometa1,(52,71))
+saturno=pygame.transform.scale(saturno1,(52,71))
+bola_fogo=pygame.transform.scale(bola_fogo1,(52,71))
+metal=pygame.transform.scale(metal1,(52,71))
+marte=pygame.transform.scale(marte1,(52,71))
+venus=pygame.transform.scale(venus1,(52,71))
+meteorito=pygame.transform.scale(meteorito1,(52,71))
+meteorito_2=pygame.transform.scale(meteorito2,(52,71))
 
 # Carregando nave
 nav=pygame.image.load("fighter.png")
@@ -51,17 +50,19 @@ nave=pygame.transform.scale(nav,(130,64))
 nave=pygame.transform.flip(nave, True, False)
 
 # criando sprites
-sprite1=cria_objeto.objeto(asteroide,(500,100))
-sprite2=cria_objeto.objeto(nave,(0,250))
-sprite3=cria_objeto.objeto(lua,(500, 250))
-sprite4=cria_objeto.objeto(ovo,(500, 340))
-sprite5=cria_objeto.objeto(fogo,(500, 140))
-sprite6=cria_objeto.objeto(martelo,(500, 190))
-sprite7=cria_objeto.objeto(carro,(500, 267))
-sprite8=cria_objeto.objeto(moto,(500, 234))
-sprite9=cria_objeto.objeto(lixo,(500, 197))
-sprite10=cria_objeto.objeto(musk,(500, 450))
-sprite11=cria_objeto.objeto(homem_ferro,(500, 270))
+# criando sprites com posições fixas
+sprite1 = cria_objeto.objeto(asteroide, (500, 100))
+sprite2 = cria_objeto.objeto(nave, (0, 250)) 
+sprite3 = cria_objeto.objeto(nave_alien, (600, 150))
+sprite4 = cria_objeto.objeto(cometa, (700, 200))
+sprite5 = cria_objeto.objeto(saturno, (800, 250))
+sprite6 = cria_objeto.objeto(bola_fogo, (900, 300))
+sprite7 = cria_objeto.objeto(metal, (1000, 350))
+sprite8 = cria_objeto.objeto(marte, (1100, 400))
+sprite9 = cria_objeto.objeto(venus, (1200, 450))
+sprite10 = cria_objeto.objeto(meteorito, (1300, 500))
+sprite11 = cria_objeto.objeto(meteorito_2, (1400, 550))
+
 
 # criando grupo de sprites para facilitar a manipulação dos mesmos
 grupo_sprites=pygame.sprite.Group(sprite1,sprite2,sprite3,sprite4,sprite5, sprite6, sprite7, sprite8, sprite9, sprite10, sprite11)
