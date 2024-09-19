@@ -30,8 +30,6 @@ venus1 = pygame.image.load("image/venus.png")
 meteorito1 = pygame.image.load("image/meteorito.png")
 meteorito2 = pygame.image.load("image/meteorito2.png")
 
-
-
 # diminuindo a escala do asteroide
 asteroide=pygame.transform.scale(aster,(52,71))
 nave_alien=pygame.transform.scale(nave_alien1,(52,71))
@@ -50,7 +48,6 @@ nav=pygame.image.load("image/fighter.png")
 nave=pygame.transform.scale(nav,(130,64))
 nave=pygame.transform.flip(nave, True, False)
 
-# criando sprites
 # criando sprites com posições fixas
 sprite1 = cria_objeto.objeto(asteroide, (500, 100))
 sprite2 = cria_objeto.objeto(nave, (0, 250)) 
